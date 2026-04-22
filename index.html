@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipped RME Classroom di Tingkat Tersier</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --background: #f4f7f6;
+            --text-dark: #333;
+            --text-light: #fff;
+            --card-bg: #fff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--background); color: var(--text-dark); line-height: 1.6; }
+
+        header { background: var(--primary); color: var(--text-light); padding: 2rem 1rem; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        header p { font-style: italic; opacity: 0.8; font-size: 0.9rem; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+
+        .tabs { display: flex; background: var(--card-bg); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 2rem; flex-wrap: wrap; }
+        .tab-btn { flex: 1; padding: 1rem; border: none; background: transparent; cursor: pointer; font-size: 1rem; font-weight: bold; color: var(--primary); transition: background 0.3s; white-space: nowrap; }
+        .tab-btn:hover { background: #ecf0f1; }
+        .tab-btn.active { background: var(--secondary); color: var(--text-light); }
+
+        .tab-content { display: none; background: var(--card-bg); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); animation: fadeIn 0.5s ease-in-out; }
+        .tab-content.active { display: block; }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        h2 { color: var(--secondary); border-bottom: 2px solid var(--secondary); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+        
+        .card { background: var(--background); padding: 1.5rem; border-left: 5px solid var(--secondary); border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .card.alert { border-left-color: var(--accent); }
+        .card h3 { margin-bottom: 0.5rem; color: var(--primary); }
+        .card ul { padding-left: 1.2rem; }
+
+        .table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 1rem; }
+        .comparison-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        .comparison-table th, .comparison-table td { padding: 1rem; border: 1px solid #ddd; text-align: left; }
+        .comparison-table th { background-color: var(--primary); color: white; }
+        .comparison-table tr:nth-child(even) { background-color: #f2f2f2; }
+
+        footer { text-align: center; padding: 2rem 1rem; color: #7f8c8d; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.5rem; }
+            .tabs { flex-direction: column; }
+            .tab-btn { text-align: left; border-bottom: 1px solid #eee; width: 100%; }
+            .tab-btn:last-child { border-bottom: none; }
+            .tab-content { padding: 1.2rem; }
+            .container { margin: 1rem auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Desain Flipped Classroom berbasis RME</h1>
+        <p>Eksplorasi Realistic Mathematics Education di Perguruan Tinggi</p>
+    </header>
+
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('abstrak')">1. Latar Belakang</button>
+            <button class="tab-btn" onclick="openTab('metodologi')">2. Metodologi RME</button>
+            <button class="tab-btn" onclick="openTab('hasil')">3. Hasil Tematik</button>
+            <button class="tab-btn" onclick="openTab('potensi')">4. Kesimpulan & Potensi</button>
+        </div>
+
+        <div id="abstrak" class="tab-content active">
+            <h2>Abstrak & Latar Belakang</h2>
+            <p>Studi ini mengeksplorasi peluang penerapan kerangka pedagogis <strong>Flipped Classroom (FC)</strong> yang dikombinasikan dengan prinsip <strong>Realistic Mathematics Education (RME)</strong> pada tingkat pendidikan tinggi. Pendekatan ini disebut sebagai <em>flipped RME classroom design</em>.</p>
+            <div class="grid">
+                <div class="card alert">
+                    <h3>Permasalahan</h3>
+                    <p>Pembelajaran matematika tradisional di tingkat tersier sering kali hanya berupa ceramah yang minim partisipasi dan keterlibatan mahasiswa. Dalam model FC, transisi ke ruang kelas bisa gagal jika tugas di kelas tidak dirancang secara koheren dengan materi persiapan prar-kelas (video).</p>
+                </div>
+                <div class="card">
+                    <h3>Tujuan Penelitian</h3>
+                    <p>Menganalisis bagaimana kerangka kerja RME dapat diperluas untuk mencakup aktivitas luar kelas (video) dan bagaimana integrasi ini memfasilitasi upaya kolaboratif mahasiswa menuju <strong>penemuan kembali yang terbimbing (guided reinvention)</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="metodologi" class="tab-content">
+            <h2>Desain Metodologi: Flipped RME Classroom</h2>
+            <p>Penelitian observasional ini melibatkan mahasiswa teknik komputer tahun pertama di Norwegia yang mempelajari matematika wajib. Desain ini secara inovatif menambahkan tahap <strong>"Aktivitas Pra-Situasional"</strong> ke dalam 4 tahapan tradisional RME (Situasional, Referensial, Umum, dan Formal).</p>
+            
+            <div class="table-responsive">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Tahapan Belajar</th>
+                            <th>Aktivitas Luar Kelas (Out-of-class)</th>
+                            <th>Aktivitas Di Kelas (In-class)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fokus Utama</strong></td>
+                            <td>Persiapan (Priming) menggunakan 2-5 video instruksional (masing-masing ~10 menit).</td>
+                            <td>Kolaborasi kelompok (1,5 jam) untuk menyelesaikan tugas konseptual.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tingkat RME</strong></td>
+                            <td><strong>Aktivitas Pra-situasional:</strong> Berinteraksi dengan definisi matematis, konsep, dan contoh prosedural awal.</td>
+                            <td><strong>Situasional hingga Formal:</strong> Melakukan matematisasi horizontal dan vertikal bersama rekan dan dosen.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Desain Tugas (Studi Kasus)</strong></td>
+                            <td>Menonton animasi fungsi sinus dari lingkaran satuan, vektor, dan operasi matriks dasar.</td>
+                            <td>1. Tugas <em>Double Ferris Wheel</em> (Trigonometri).<br>2. Tugas <em>Skewed N</em> (Aljabar Linear / Matriks).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="hasil" class="tab-content">
+            <h2>Hasil Temuan: 6 Tema Utama Analisis Tematik</h2>
+            <p>Melalui analisis tematik dari transkrip interaksi kelas, ditemukan 6 tema yang memetakan aktivitas belajar dan peran vital instruktur dalam kelas:</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>1. Referensi Pra-Situasional</h3>
+                    <p>Mahasiswa secara langsung menggunakan istilah dan konsep spesifik (misalnya, 'rotasi' dan 'skala') yang mereka dapatkan dari video luar kelas ke dalam diskusi awal untuk merumuskan masalah.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Aktivitas Situasional</h3>
+                    <p>Mahasiswa menciptakan representasi awal dari masalah yang "nyata" secara eksperimental, seringkali dibantu oleh isyarat, sketsa, dan aplikasi visual interaktif (seperti applet GeoGebra).</p>
+                </div>
+                <div class="card alert">
+                    <h3>3. Panduan pada Model-Of</h3>
+                    <p>Instruktur melakukan intervensi (seperti diskusi kelas mini) ketika mahasiswa kesulitan melompat dari pemahaman informal menuju deskripsi matematika formal awal (misal: menentukan dimensi matriks yang benar).</p>
+                </div>
+                <div class="card">
+                    <h3>4. Aktivitas Referensial</h3>
+                    <p>Siswa menyempurnakan <em>model-of</em> mereka. Mereka memadukan kuantitas yang ada pada tugas situasional secara langsung ke dalam model fungsi matematika formal menggunakan catatan pra-situasional mereka.</p>
+                </div>
+                <div class="card alert">
+                    <h3>5. Panduan pada Model-For</h3>
+                    <p>Guru memberikan bimbingan penting bagi siswa agar dapat mengubah pandangan mereka dari situasi masalah sempit menuju konvensi matematis universal (generalisasi model).</p>
+                </div>
+                <div class="card">
+                    <h3>6. Matematisasi Vertikal (Umum)</h3>
+                    <p>Siswa sepenuhnya bergerak di dalam dunia simbol abstrak, melepaskan diri dari citra situasional awal, dan dapat mendekonstruksi serta memanipulasi ekspresi matematika dengan penalaran tingkat lanjut.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="potensi" class="tab-content">
+            <h2>Kesimpulan & Potensi Riset Lanjutan</h2>
+            <div class="grid">
+                <div class="card alert">
+                    <h3>⭐ Peran Kritis Dosen</h3>
+                    <p>Studi ini membantah miskonsepsi bahwa kehadiran video akan menurunkan urgensi peran dosen di kelas. Justru dalam FC, <strong>panduan guru (teacher guidance) menjadi pilar paling vital</strong> agar mahasiswa berhasil bertransisi dalam tahapan matematisasi RME.</p>
+                </div>
+                <div class="card">
+                    <h3>Efisiensi Waktu Pembelajaran</h3>
+                    <p>Persiapan pra-kelas menggunakan video merupakan kunci yang menjadikan pemodelan matematis kompleks ala RME menjadi sangat praktis dan layak untuk dilakukan pada kurikulum perguruan tinggi yang padat.</p>
+                </div>
+                <div class="card">
+                    <h3>Peluang Riset Masa Depan</h3>
+                    <p>Terdapat peluang riset bagi akademisi untuk mendesain pembelajaran berseri: Merancang rangkaian tugas RME yang melintasi <strong>beberapa sesi</strong> (multi-sesi luar kelas dan di kelas) untuk melihat perkembangan <em>model-for</em> yang jauh lebih matang.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Mathnology | Flipped Classroom Context
+    </footer>
+
+    <script>
+        function openTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
