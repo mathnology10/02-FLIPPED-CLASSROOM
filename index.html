@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flipped RME Classroom di Tingkat Tersier</title>
+    <title>Flipped Classroom dengan RME</title>
     <style>
         :root {
             --primary: #2c3e50;
@@ -64,61 +64,57 @@
 <body>
 
     <header>
-        <h1>Desain Flipped Classroom berbasis RME</h1>
-        <p>Eksplorasi Realistic Mathematics Education di Perguruan Tinggi</p>
+        <h1>Flipped Classroom dengan RME</h1>
+        <p>Berdasarkan studi Fredriksen (2021) – Matematika Teknik Komputer Tingkat 1</p>
     </header>
 
     <div class="container">
         <div class="tabs">
-            <button class="tab-btn active" onclick="openTab('abstrak')">1. Latar Belakang</button>
-            <button class="tab-btn" onclick="openTab('metodologi')">2. Metodologi RME</button>
-            <button class="tab-btn" onclick="openTab('hasil')">3. Hasil Tematik</button>
-            <button class="tab-btn" onclick="openTab('potensi')">4. Kesimpulan & Potensi</button>
+            <button class="tab-btn active" onclick="openTab('abstrak')">1. Ringkasan</button>
+            <button class="tab-btn" onclick="openTab('metodologi')">2. Metodologi</button>
+            <button class="tab-btn" onclick="openTab('hasil')">3. Hasil & Kinerja</button>
+            <button class="tab-btn" onclick="openTab('potensi')">4. Potensi Riset</button>
         </div>
 
         <div id="abstrak" class="tab-content active">
             <h2>Abstrak & Latar Belakang</h2>
-            <p>Studi ini mengeksplorasi peluang penerapan kerangka pedagogis <strong>Flipped Classroom (FC)</strong> yang dikombinasikan dengan prinsip <strong>Realistic Mathematics Education (RME)</strong> pada tingkat pendidikan tinggi. Pendekatan ini disebut sebagai <em>flipped RME classroom design</em>.</p>
+            <p>Studi ini menggabungkan <strong>Flipped Classroom (FC)</strong> dengan <strong>Realistic Mathematics Education (RME)</strong> di tingkat perguruan tinggi. Mahasiswa nonton video di luar kelas (pre-situational), lalu di kelas bekerja kelompok memodelkan masalah nyata menggunakan prinsip RME (situational → referential → general → formal).</p>
             <div class="grid">
-                <div class="card alert">
+                <div class="card">
                     <h3>Permasalahan</h3>
-                    <p>Pembelajaran matematika tradisional di tingkat tersier sering kali hanya berupa ceramah yang minim partisipasi dan keterlibatan mahasiswa. Dalam model FC, transisi ke ruang kelas bisa gagal jika tugas di kelas tidak dirancang secara koheren dengan materi persiapan prar-kelas (video).</p>
+                    <p>Kuliah tradisional kurang kolaboratif. FC + RME memungkinkan mahasiswa “menciptakan” matematika sendiri melalui tugas modeling yang realistis.</p>
                 </div>
                 <div class="card">
                     <h3>Tujuan Penelitian</h3>
-                    <p>Menganalisis bagaimana kerangka kerja RME dapat diperluas untuk mencakup aktivitas luar kelas (video) dan bagaimana integrasi ini memfasilitasi upaya kolaboratif mahasiswa menuju <strong>penemuan kembali yang terbimbing (guided reinvention)</strong>.</p>
+                    <p>Melihat bagaimana desain tugas RME di FC mendukung kolaborasi mahasiswa dan guided reinvention (penemuan matematika terbimbing).</p>
                 </div>
             </div>
         </div>
 
         <div id="metodologi" class="tab-content">
-            <h2>Desain Metodologi: Flipped RME Classroom</h2>
-            <p>Penelitian observasional ini melibatkan mahasiswa teknik komputer tahun pertama di Norwegia yang mempelajari matematika wajib. Desain ini secara inovatif menambahkan tahap <strong>"Aktivitas Pra-Situasional"</strong> ke dalam 4 tahapan tradisional RME (Situasional, Referensial, Umum, dan Formal).</p>
+            <h2>Desain Metodologi</h2>
+            <p>15 mahasiswa Teknik Komputer tahun pertama. Setiap sesi: 2–5 video (10 menit) untuk persiapan luar kelas. Di kelas (1,5 jam): tugas RME berbasis video.</p>
             
             <div class="table-responsive">
                 <table class="comparison-table">
                     <thead>
                         <tr>
-                            <th>Tahapan Belajar</th>
-                            <th>Aktivitas Luar Kelas (Out-of-class)</th>
-                            <th>Aktivitas Di Kelas (In-class)</th>
+                            <th>Komponen</th>
+                            <th>Flipped RME Classroom</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Fokus Utama</strong></td>
-                            <td>Persiapan (Priming) menggunakan 2-5 video instruksional (masing-masing ~10 menit).</td>
-                            <td>Kolaborasi kelompok (1,5 jam) untuk menyelesaikan tugas konseptual.</td>
+                            <td><strong>Luar Kelas (Pre-situational)</strong></td>
+                            <td>Nonton video pengantar + contoh (definisi, operasi, contoh modeling). Mahasiswa catat catatan.</td>
                         </tr>
                         <tr>
-                            <td><strong>Tingkat RME</strong></td>
-                            <td><strong>Aktivitas Pra-situasional:</strong> Berinteraksi dengan definisi matematis, konsep, dan contoh prosedural awal.</td>
-                            <td><strong>Situasional hingga Formal:</strong> Melakukan matematisasi horizontal dan vertikal bersama rekan dan dosen.</td>
+                            <td><strong>Di Kelas</strong></td>
+                            <td>Kerja kelompok modeling tugas realistis (Double Ferris Wheel & Skewed N). Dosen fasilitasi diskusi.</td>
                         </tr>
                         <tr>
-                            <td><strong>Desain Tugas (Studi Kasus)</strong></td>
-                            <td>Menonton animasi fungsi sinus dari lingkaran satuan, vektor, dan operasi matriks dasar.</td>
-                            <td>1. Tugas <em>Double Ferris Wheel</em> (Trigonometri).<br>2. Tugas <em>Skewed N</em> (Aljabar Linear / Matriks).</td>
+                            <td><strong>Tugas Utama</strong></td>
+                            <td>1. Double Ferris Wheel (trigonometri). 2. Skewed N (transformasi matriks linear algebra).</td>
                         </tr>
                     </tbody>
                 </table>
@@ -126,57 +122,54 @@
         </div>
 
         <div id="hasil" class="tab-content">
-            <h2>Hasil Temuan: 6 Tema Utama Analisis Tematik</h2>
-            <p>Melalui analisis tematik dari transkrip interaksi kelas, ditemukan 6 tema yang memetakan aktivitas belajar dan peran vital instruktur dalam kelas:</p>
+            <h2>Hasil Temuan</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>1. Referensi Pra-Situasional</h3>
-                    <p>Mahasiswa secara langsung menggunakan istilah dan konsep spesifik (misalnya, 'rotasi' dan 'skala') yang mereka dapatkan dari video luar kelas ke dalam diskusi awal untuk merumuskan masalah.</p>
-                </div>
-                <div class="card">
-                    <h3>2. Aktivitas Situasional</h3>
-                    <p>Mahasiswa menciptakan representasi awal dari masalah yang "nyata" secara eksperimental, seringkali dibantu oleh isyarat, sketsa, dan aplikasi visual interaktif (seperti applet GeoGebra).</p>
-                </div>
-                <div class="card alert">
-                    <h3>3. Panduan pada Model-Of</h3>
-                    <p>Instruktur melakukan intervensi (seperti diskusi kelas mini) ketika mahasiswa kesulitan melompat dari pemahaman informal menuju deskripsi matematika formal awal (misal: menentukan dimensi matriks yang benar).</p>
-                </div>
-                <div class="card">
-                    <h3>4. Aktivitas Referensial</h3>
-                    <p>Siswa menyempurnakan <em>model-of</em> mereka. Mereka memadukan kuantitas yang ada pada tugas situasional secara langsung ke dalam model fungsi matematika formal menggunakan catatan pra-situasional mereka.</p>
+                    <h3>📈 Aktivitas Modeling Mahasiswa</h3>
+                    <ul>
+                        <li><strong>Pre-situational referencing</strong>: Mahasiswa merujuk video untuk definisi & contoh.</li>
+                        <li><strong>Situational activity</strong>: Sketsa, gesture, simulasi GeoGebra untuk pahami konteks.</li>
+                        <li><strong>Referential activity</strong>: Hubungkan situasi nyata dengan model matematis dari video.</li>
+                        <li><strong>General & vertical mathematization</strong>: Mahasiswa bangun model umum & simbol abstrak.</li>
+                    </ul>
                 </div>
                 <div class="card alert">
-                    <h3>5. Panduan pada Model-For</h3>
-                    <p>Guru memberikan bimbingan penting bagi siswa agar dapat mengubah pandangan mereka dari situasi masalah sempit menuju konvensi matematis universal (generalisasi model).</p>
-                </div>
-                <div class="card">
-                    <h3>6. Matematisasi Vertikal (Umum)</h3>
-                    <p>Siswa sepenuhnya bergerak di dalam dunia simbol abstrak, melepaskan diri dari citra situasional awal, dan dapat mendekonstruksi serta memanipulasi ekspresi matematika dengan penalaran tingkat lanjut.</p>
+                    <h3>📉 Peran Dosen & Kolaborasi</h3>
+                    <ul>
+                        <li>Dosen beri guidance saat transisi model-of → model-for.</li>
+                        <li>Video luar kelas + panduan dosen sangat mendukung kolaborasi kelompok.</li>
+                        <li>Mahasiswa aktif menciptakan matematika sendiri (guided reinvention).</li>
+                    </ul>
                 </div>
             </div>
         </div>
 
         <div id="potensi" class="tab-content">
-            <h2>Kesimpulan & Potensi Riset Lanjutan</h2>
+            <h2>Peluang & Potensi Riset Lanjutan</h2>
+            <p>Saran dari studi:</p>
             <div class="grid">
-                <div class="card alert">
-                    <h3>⭐ Peran Kritis Dosen</h3>
-                    <p>Studi ini membantah miskonsepsi bahwa kehadiran video akan menurunkan urgensi peran dosen di kelas. Justru dalam FC, <strong>panduan guru (teacher guidance) menjadi pilar paling vital</strong> agar mahasiswa berhasil bertransisi dalam tahapan matematisasi RME.</p>
+                <div class="card">
+                    <h3>1. Desain Tugas Lebih Panjang</h3>
+                    <p>Gunakan rangkaian tugas RME yang span beberapa sesi FC agar model mahasiswa semakin matang.</p>
                 </div>
                 <div class="card">
-                    <h3>Efisiensi Waktu Pembelajaran</h3>
-                    <p>Persiapan pra-kelas menggunakan video merupakan kunci yang menjadikan pemodelan matematis kompleks ala RME menjadi sangat praktis dan layak untuk dilakukan pada kurikulum perguruan tinggi yang padat.</p>
+                    <h3>2. Peran Dosen Lebih Aktif</h3>
+                    <p>Dosen harus fasilitasi transisi antar tahap modeling (bukan hanya penyampai materi).</p>
                 </div>
                 <div class="card">
-                    <h3>Peluang Riset Masa Depan</h3>
-                    <p>Terdapat peluang riset bagi akademisi untuk mendesain pembelajaran berseri: Merancang rangkaian tugas RME yang melintasi <strong>beberapa sesi</strong> (multi-sesi luar kelas dan di kelas) untuk melihat perkembangan <em>model-for</em> yang jauh lebih matang.</p>
+                    <h3>3. Video yang Lebih Terintegrasi</h3>
+                    <p>Video pre-situational harus selaras dengan tugas di kelas agar mendukung horizontal mathematization.</p>
+                </div>
+                <div class="card">
+                    <h3>4. Skala Lebih Besar</h3>
+                    <p>Uji desain ini di kelas lebih besar & mata kuliah lain untuk melihat efektivitas jangka panjang.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <footer>
-        Mathnology | Berdasarkan "Exploring Realistic Mathematics Education in a Flipped Classroom Context at the Tertiary Level"
+        Mathnology | Berdasarkan "Exploring Realistic Mathematics Education in a Flipped Classroom Context at the Tertiary Level" (Fredriksen, 2021)
     </footer>
 
     <script>
